@@ -33,13 +33,15 @@ Options:
 ## Output format
 
 Each extraction is presented in a tab separated line, consisting of:
-1. Original sentence
-2. Predicate template
-3. Lemmatized predicate
-4. Template
-5. Argument1 name
-6. Argument1 value
-7. ...
+1. Original sentence <br>
+Words are separated by a single space, chunks by double spaces
+2. Index of the main predicate's chunk
+3. Predicate template
+4. Lemmatized predicate
+5. Template
+6. Argument1 name
+7. Argument1 value
+8. ...
 
 ## Examples:
 ```bash
