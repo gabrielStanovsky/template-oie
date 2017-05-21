@@ -99,7 +99,9 @@ class prop_extraction:
 
                     # Find if this is the right spot to plug the verb in the template
                     if curr_arg > verb and not extraction.pred_exists:
-                        extraction.set_predicate(self.parser.get_text(verb), self.parser.get_lemma(verb))
+                        extraction.set_predicate(self.parser.get_text(verb),
+                                                 self.parser.get_lemma(verb),
+                                                 verb)
 
                     # Add non-consecutive particles to predicate
                     if self.parser.is_part_of_non_consecutive_span(verb, curr_arg):
@@ -154,14 +156,18 @@ class Extraction:
         self.template = ''
         self.pred_exists = False
 
-    def set_predicate(self, pred_text, lemmatized_pred_text):
+    def set_predicate(self, pred_text, lemmatized_pred_text,
+                      pred_index):
         """
         Add the predicate and its lemmatized version to this template
         :param pred_text: the predicate template
+        :param lemmatized_pred_text: the predicate's lemma
+        :param pred_index: the index of the predicate word in the sentence
         """
         self.template += '{} '.format(pred_text)
         self.pred = pred_text
         self.lemmatized_pred = lemmatized_pred_text
+        self.pred_index = pred_index
         if self.pred != self.lemmatized_pred:
             logging.debug('Lemmatized: {} / {}'.format(self.pred, self.lemmatized_pred))
         self.pred_exists = True
@@ -195,7 +201,7 @@ class Extraction:
         self.template = self.template.lstrip().rstrip()
         # create a lemmatized template, by replacing the predicate slot with its lemma
         self.lemmatized_template = self.template.replace(self.pred, self.lemmatized_pred)
-        ret = '\t'.join([self.template, self.lemmatized_template] +
+        ret = '\t'.join([str(self.pred_index), self.template, self.lemmatized_template] +
                         ['A{}\t{}'.format(key, val)
                          for key, val in sorted(self.roles_dict.iteritems(), key = lambda (k,_): k)])
         return ret
@@ -229,9 +235,13 @@ def run_single_file(input_fn, output_fn, prop_ex):
                 sent = data[0]
             logging.info('Read: {}'.format(sent))
             for ex in prop_ex.get_extractions(sent):
+                # Encode our chunking via double spaces
+                spacy_tokenized_sent = "  ".join([prop_ex.parser.get_text(i)
+                                                  for i in range(prop_ex.parser.get_len())])
                 to_print = '\t'.join(map(str,
                                          ([tweet_id] if prop_ex.include_id else [])\
-                                         + [sent, ex])).decode('ascii', errors = 'ignore')
+                                         + [spacy_tokenized_sent, ex])).decode('ascii',
+                                                                               errors = 'ignore')
                 logging.debug(to_print)
                 f_out.write(to_print + "\n")
                 ex_counter += 1
