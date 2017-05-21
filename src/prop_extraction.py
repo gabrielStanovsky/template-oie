@@ -2,7 +2,7 @@
 author: Gabi Stanovsky
 
 Usage:
-    prop_extraction --in=INPUT_FILE --out=OUTPUT_FILE [--include-id]
+    prop_extraction --in=INPUT_FILE --out=OUTPUT_FILE [--id]
 
 Extract propositions from a given input file, output is produced in separate output file.
 If both in and out paramaters are directories, the script will iterate over all *.txt files in the input directory and
@@ -37,7 +37,7 @@ def main():
     # Parse args
     inp = args['--in']
     out = args['--out']
-    include_id = args["--include-id"] is None
+    include_id = args["--id"] is not None
 
     logging.info("Loading spaCy...")
     pe = prop_extraction(include_id)
