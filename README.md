@@ -7,7 +7,7 @@
 - [Installation](#installation)
 - [Running](#running)
 - [Output format](#output-format)
-- [Examples:](#examples)
+- [Examples](#examples)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -73,7 +73,10 @@ Words are separated by a single space, chunks by double spaces
 7. Argument1 value
 8. ...
 
-## Examples:
+## Examples
+
+See [the example folder](./examples) for the output over more than 3K sentences from the news domain.
+
 ```bash
 python ./prop_extraction.py --in=../examples/sentences.txt --out=../examples/sentences.prop
 ```
