@@ -8,6 +8,7 @@
 - [Running](#running)
 - [Output format](#output-format)
 - [Examples](#examples)
+- [Projects which use template-oie](#projects-which-use-template-oie)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -80,3 +81,8 @@ See [the example folder](./examples) for the output over more than 3K sentences 
 ```bash
 python ./prop_extraction.py --in=../examples/sentences.txt --out=../examples/sentences.prop
 ```
+
+
+## Projects which use template-oie
+
+* [Open Knowledge Representation](https://github.com/vered1986/OKR)
