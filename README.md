@@ -1,5 +1,14 @@
 # template-oie
-Extract templated Open Information Extraction
+Extracts templated Open Information Extraction: allowing for diverse, non-contiguous, multi-word predicates, while keeping argument short and useful for downstream applications.
+
+_the Frankfurt loss  stemmed  from  a computer program  for  calculating  prices  on  forward - rate agreements  that  failed  to envision  an interest - rate environment  where  short - term rates  were  equal  to  or  higher  than  long - term rates_
+
+     Under {A0} {A1} would rise from {A2} to {A3}
+     A0:	the agreement
+     A1:	the minimum wage
+     A2:	3.35
+	 A3:	4.25
+
 
 ## Prerequisites
 1. python 2.7
