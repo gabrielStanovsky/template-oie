@@ -17,7 +17,7 @@ Extracts templated Open Information Extraction: allowing for diverse, non-contig
 
 For example, given the sentence:
 
-_the Frankfurt loss  stemmed  from  a computer program  for  calculating  prices  on  forward - rate agreements  that  failed  to envision  an interest - rate environment  where  short - term rates  were  equal  to  or  higher  than  long - term rates_
+_Under the agreement with the House and Senate leaders , the minimum wage would rise from the current $ 3.35 an hour to $ 4.25 an hour._
 
 One of the extractions is:
 
@@ -25,8 +25,8 @@ One of the extractions is:
 
         A0:	the agreement
         A1:	the minimum wage
-        A2:	3.35
-        A3:	4.25
+        A2:	$ 3.35 an hour
+        A3:	$ 4.25 an hour
 
 Note that that the head of the predicate (_rise_) is also identified.
 
