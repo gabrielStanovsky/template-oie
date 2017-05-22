@@ -65,7 +65,7 @@ Options:
 
 Each extraction is presented in a tab separated line, consisting of:
 1. Original sentence <br>
-Words are separated by a single space, chunks by double spaces
+Words are separated by a single space, *chunks by double spaces*.
 2. Index of the main predicate's chunk
 3. Predicate template
 4. Lemmatized predicate
