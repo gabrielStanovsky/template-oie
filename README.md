@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+# Templated Open Information Extraction
+
+- [template-oie](#template-oie)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running](#running)
+  - [Output format](#output-format)
+  - [Examples:](#examples)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # template-oie
 Extracts templated Open Information Extraction: allowing for diverse, non-contiguous, multi-word predicates, while keeping argument short and useful for downstream applications.
 
