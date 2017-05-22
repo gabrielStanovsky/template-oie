@@ -3,7 +3,7 @@ Extracts templated Open Information Extraction: allowing for diverse, non-contig
 
 _the Frankfurt loss  stemmed  from  a computer program  for  calculating  prices  on  forward - rate agreements  that  failed  to envision  an interest - rate environment  where  short - term rates  were  equal  to  or  higher  than  long - term rates_
 
-* *Under* {A0} {A1} would rise from {A2} to {A3}
+* **Under** {A0} {A1} **would *rise* from** {A2} **to** {A3}
 
         A0:	the agreement
         A1:	the minimum wage
