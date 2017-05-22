@@ -8,7 +8,7 @@
 - [Running](#running)
 - [Output format](#output-format)
 - [Examples](#examples)
-- [Projects which use template-oie](#projects-which-use-template-oie)
+- [Users of template-oie](#users-of-template-oie)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -83,6 +83,8 @@ python ./prop_extraction.py --in=../examples/sentences.txt --out=../examples/sen
 ```
 
 
-## Projects which use template-oie
+## Users of template-oie
+
+The following projects make use of template-oie:
 
 * [Open Knowledge Representation](https://github.com/vered1986/OKR)
