@@ -13,7 +13,7 @@
 
 ## Introduction
 
-Extracts templated Open Information Extraction: allowing for diverse, non-contiguous, multi-word predicates, while keeping argument short and useful for downstream applications.
+Extracts templated Open Information Extraction: allowing for diverse, non-contiguous, multi-word predicates, while keeping the arguments short and useful for downstream applications.
 
 For example, given the sentence:
 
