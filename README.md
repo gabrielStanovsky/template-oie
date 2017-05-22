@@ -2,6 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 # Templated Open Information Extraction
 
+- [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Running](#running)
@@ -9,6 +10,8 @@
 - [Examples:](#examples)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Introduction
 
 Extracts templated Open Information Extraction: allowing for diverse, non-contiguous, multi-word predicates, while keeping argument short and useful for downstream applications.
 
