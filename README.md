@@ -22,7 +22,7 @@ _Under the agreement with the House and Senate leaders , the minimum wage would 
 
 One of the extractions is:
 
-* **Under** {A0} {A1} **would *rise* from** {A2} **to** {A3}
+* **Under** {A0} {A1} **would __*rise*__ from** {A2} **to** {A3}
 
         A0:	the agreement
         A1:	the minimum wage
