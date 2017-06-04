@@ -88,3 +88,4 @@ python ./prop_extraction.py --in=../examples/sentences.txt --out=../examples/sen
 The following projects make use of template-oie:
 
 * [Open Knowledge Representation](https://github.com/vered1986/OKR)
+* [Chirps](https://github.com/vered1986/Chirps)
